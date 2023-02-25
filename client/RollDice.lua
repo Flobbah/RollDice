@@ -1,5 +1,5 @@
 --The reason on why we are using global values for this script is to optimize it as much as possible. We are trying to avoid recurring functions where they shouldn't be called so much
-
+local QBCore = exports['qb-core']:GetCoreObject()
 local globalPlayerPedId = nil
 
 Citizen.CreateThread(function()  --Creates a suggestion box if you are using the /roll command through the config.
@@ -109,4 +109,12 @@ Citizen.CreateThread(function() --This function itilises lua's libary. Collects 
         Citizen.Wait(60000)
         collectgarbage("collect")
     end 
+end)
+
+QBCore.Functions.CreateUseableItem("dice", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+	local dices = tonumber(2)
+	local sides = tonumber(6)
+	TriggerEvent("RollDice:Server:Event", src, dices, sides)
 end)

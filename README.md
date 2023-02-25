@@ -13,3 +13,13 @@ Discord Server: https://discord.io/voxit
 My Personal Discord: SpecialStos#0001
 
 Don't forget to check out our Tebex store for resource you are able to purchase: https://voxit.tebex.io/
+
+# Installation
+
+1. Drag and drop the resource into your resource folder
+2. Drag and drop the dice.png into your qb-inventory
+3. Add the item into your qb-core/shared/items.lua
+```lua
+	['dice']                 		 = {['name'] = 'dice', 							['label'] = 'Dice', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'dice.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = "It's a dice"},
+```
+4. Add start RollDice to your server.cfg

@@ -1,6 +1,6 @@
 RollDice = {}
 
-RollDice.UseCommand = true --Use command or not.
+RollDice.UseCommand = false --Use command or not.
 RollDice.ChatCommand = "roll" --Command name.
 RollDice.ChatPrefix = "SYSTEM" --This is the chat prefix. If they type a wrong number or invalid one then it will say that SYSTEM has messaged them, just try it.
 RollDice.ChatTemplate = "error" --YOU SHOULD CHANGE THIS HERE. I don't really know what chat themes you got so change it. We made our own ones, like error, warning, etc. You can find out what themes you got by checking inside the chat resource in index.css
